@@ -1,0 +1,54 @@
+@startuml
+allow_mixing
+
+object Juego
+object Mazo
+object Descarte
+object Objectivo
+
+object Trabajo_N {
+	- Carta[N]
+}
+
+object "Carta" as carta1 {
+	- int numero
+	- Palo palo
+	- Estado estado : "Boca arriba"	
+}
+object "Carta" as carta3 {
+	- int numero
+	- Palo palo
+	- Estado estado
+}
+object "Carta" as carta4 {
+	- int numero
+	- Palo palo
+	- Estado estado
+}
+object "Carta" as carta5 {
+	- int numero
+	- Palo palo
+	- Estado estado : "Boca abajo"
+}
+
+carta1 "0" <-down- "1" Trabajo_N
+
+carta1 <-[hidden]left- carta
+
+Trabajo_N "1" -> "0" carta
+
+Trabajo_N "7" <-down- "1" Juego
+
+Descarte "1" <-- "1" Juego
+
+Objectivo "4" <-- "1" Juego
+
+Mazo "1" <-- "1" Juego
+
+carta3 "0" <- "1" Descarte
+
+carta4 "13" <-- "1" Objectivo
+
+carta5 "0" <-- "1" Mazo
+
+@enduml

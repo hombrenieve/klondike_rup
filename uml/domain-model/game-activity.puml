@@ -1,0 +1,38 @@
+@startuml
+' TODO: Rellenar las condiciones
+start
+:repartir;
+while (no completo ni bloqueado?)
+	split
+	if (cartas en mazo?) then
+		:sacar a descarte;
+	endif
+	split again
+	if (no hay cartas en mazo?) then
+		:mover pila de descarte entera a mazo;
+	endif
+	split again
+	if () then
+		:mover de descarte a trabajo;
+	endif
+	split again
+	if () then
+		:mover de descarte a objetivo;
+	endif
+	split again
+	if ()
+		:mover entre trabajos;
+	endif
+	split again
+	if () then
+		:mover de trabajo a objetivo;
+	endif
+	split again
+	if ()
+		:mover de objetivo a trabajo;
+	endif
+	endsplit
+endwhile
+stop
+	
+@enduml

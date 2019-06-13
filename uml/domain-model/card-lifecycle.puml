@@ -1,0 +1,14 @@
+@startuml
+
+[*] --> EnTrabajo: [28 primeras]
+[*] -> EnMazo
+EnMazo --> EnDescarte
+EnDescarte --> EnMazo: [Mazo is empty]
+EnTrabajo -> EnTrabajo: [carta es visible and\n!= palos and carta.numero+1 == trabajo.cima.numero]
+EnTrabajo --> EnObjetivo
+EnDescarte -> EnObjetivo
+EnDescarte --> EnTrabajo
+EnObjetivo -> EnTrabajo
+EnObjetivo -> [*]: [objetivo completo]
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+top to bottom direction
+hide empty description
+state "Partida abierta" as precondicion
+state " " as s1
+state " " as s2
+state " " as s3
+state " " as s4
+state " " as s5
+
+[*] --> precondicion
+precondicion --> s1: El usuario solicita mover una carta de trabajo a objetivo
+s1 --> s2: El sistema permite introducir una carta de trabajo
+s2 --> s3: El usuario introduce la carta del trabajo
+s3 --> CartaInvalida: [carta != cima de trabajo]\nEl sistema muestra un mensaje de error
+s3 --> s4: El sistema permite introducir un objetivo destino
+s4 --> s5: El usuario introduce un objetivo destino
+s5 --> ObjetivoInvalido: [palo carta != palo objetivo || carta != cima objetivo+1]\nEl sistema muestra un eror
+s5 --> CartaMovida: El sistema muestra la carta en objetivo destino
+CartaMovida --> PartidaGanada: [partida ganada?]\nEl sistema muestra un mensaje de partida ganada
+
+@enduml

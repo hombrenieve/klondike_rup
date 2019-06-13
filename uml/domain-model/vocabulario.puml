@@ -1,0 +1,23 @@
+@startuml
+
+
+Pila o- Carta
+
+Pila <|-down- Objetivo
+Pila <|-down- Mazo
+Pila <|-down- Descarte
+Pila <|-down- Trabajo
+
+
+Carta "1" *-down- "1" Numero
+Carta "1" *-down- "1" Palo
+Carta "1" *-down- "1" Estado
+
+Estado <|-down- BocaArriba
+Estado <|-down- BocaAbajo
+
+Movimiento .> Pila
+class Movimiento
+class Jugador
+
+@enduml

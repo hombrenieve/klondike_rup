@@ -1,0 +1,13 @@
+@startuml
+
+top to bottom direction
+
+[*] --> PartidaAbierta
+PartidaAbierta --> MovimientoEntreTrabajosIniciado: El jugador solicita mover de trabajo a trabajo
+MovimientoEntreTrabajosIniciado --> PilaOrigenSolicitada: El sistema permite introducir la pila origen
+PilaOrigenSolicitada --> PilaOrigenIntroducida: El usuario introduce la pila origen
+PilaOrigenIntroducida --> PilaDestinoSolicitada: El sistema permite introducir la pila destino
+PilaDestinoSolicitada --> PilaDestinoIntroducida: El usuario introduce la pila destino
+PilaDestinoIntroducida --> PilaMovida: El sistema muestra la pila origen en el destino
+
+@enduml

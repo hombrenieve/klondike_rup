@@ -1,0 +1,41 @@
+@startuml
+
+package "Controllers" #DDDDDD {
+    package "Movement" #F7F3F3 {
+        class Move
+        class Deck_to_Discarded << movement >>
+        class Discaded_to_Deck << movement >>
+        class Discaded_to_Work << movement >>
+        class Discaded_to_Target << movement >>
+        class Work_to_Discarded << movement >>
+        class Work_to_Work << movement >>
+        class Work_to_Target << movement >>
+        class Target_to_Work << movement >>
+
+        Deck_to_Discarded -up-|> Move
+        Discaded_to_Deck -up-|> Move
+        Discaded_to_Work -up-|> Move
+        Discaded_to_Target -up-|> Move
+        Work_to_Discarded -up-|> Move
+        Work_to_Work -up-|> Move
+        Work_to_Target -up-|> Move
+        Target_to_Work -up-|> Move
+
+    }
+
+    package "Game" #F7F3F3 {
+        class Start << management >>
+        class Exit << management >>
+        class Create << management >>
+        class Save << management >>
+        class Delete << management >>
+        class Open << management >>
+        class Close << management >>
+        class Undo << management >>
+        class Redo << management >>
+        class Demo << management >>
+        class Show << management >>
+    }
+}
+
+@enduml

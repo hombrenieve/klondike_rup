@@ -1,0 +1,14 @@
+@startuml
+
+[*] -down-> EnPartida: Repartir
+
+EnPartida -> EnPartida: Mover de Mazo a Descartes
+EnPartida -> EnPartida: Mover de Descartes a Mazo
+EnPartida -> EnPartida: Mover de Descartes a Trabajo
+EnPartida -> EnPartida: Mover de Descartes a Objetivo
+EnPartida -> EnPartida: Mover entre trabajos
+EnPartida -> EnPartida: Mover de Trabajo a Objetivo
+EnPartida -> EnPartida: Mover de Objetivo a Trabajo
+EnPartida -down-> [*]: [Completo?]
+
+@enduml

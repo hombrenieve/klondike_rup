@@ -1,0 +1,19 @@
+@startuml
+
+
+package model {
+
+	abstract Stack
+	Stack <|-- Deck
+	Stack <|-- Draw
+	Stack <|-- Work
+	Stack <|-- Target
+	Card -o Stack
+	Game *-up- "1" Deck
+	Game *-up- "1" Draw
+	Game *-up- "4" Work
+	Game *-up- "1" Target
+
+}
+
+@enduml

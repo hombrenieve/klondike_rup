@@ -1,0 +1,12 @@
+@startuml
+
+[*] -> PartidaCerrada: Arrancar
+PartidaCerrada -down-> [*]: Salir
+PartidaCerrada -> PartidaAbierta: Crear partida
+PartidaCerrada -> PartidaAbierta: Abrir partida
+PartidaAbierta -> PartidaCerrada: Cerrar partida
+PartidaAbierta -> PartidaAbierta: Mover|Undo|Redo|Salvar partida
+PartidaAbierta -> PartidaCerrada: Mover [ganado]
+PartidaAbierta -> [*]: Salir
+
+@enduml

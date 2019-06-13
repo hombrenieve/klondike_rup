@@ -1,0 +1,28 @@
+@startuml
+
+object User
+
+object ":Game" as game_view <<view>> {
+
+}
+
+object ":Work_to_Work" as Work_to_Work <<move controller>> {
+
+}
+
+object ":Game" as game_model <<model>> {
+
+}
+
+User -right-> game_view: move_card
+User -right-> game_view: move_stack
+
+game_view -right-> Work_to_Work: move_card
+game_view -right-> Work_to_Work: move_stack
+
+game_view -down-> game_model: get_stack_work
+
+Work_to_Work -down-> game_model: move_card
+Work_to_Work -down-> game_model: move_stack
+
+@enduml

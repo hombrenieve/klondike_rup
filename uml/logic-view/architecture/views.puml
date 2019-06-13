@@ -1,0 +1,25 @@
+@startuml
+
+package "Views" #DDDDDD {
+    package "InGame" #F7F3F3 {    
+        class Game
+
+        class Work
+        class Target
+        class Deck
+        class Discarded
+
+        class Options 
+
+        Game *-down- Work
+        Game *-down- Target
+        Game *-down- Deck
+        Game *-down- Discarded
+        Game *-down- Options
+    }
+    package "Menu" #F7F3F3 {
+        class Menu
+    }
+}
+
+@enduml

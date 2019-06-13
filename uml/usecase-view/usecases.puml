@@ -1,0 +1,33 @@
+@startuml
+
+left to right direction
+
+player --> (Arrancar)
+player --> (Crear partida)
+(Crear partida) ..> (Mostrar partida): <<include>>
+player --> (Abrir partida)
+(Abrir partida) ..> (Mostrar partida): <<include>>
+player --> (Borrar partida)
+player --> (Salvar partida)
+(Salvar partida) ..> (Mostrar partida): <<include>>
+player --> (Cerrar partida)
+player --> (Salir)
+(Salvar partida) .> (Salir): <<extend>>
+player --> (Undo)
+(Undo) ..> (Mostrar partida): <<include>>
+(Redo) ..> (Mostrar partida): <<include>>
+player --> (Redo)
+player --> (Demo)
+player --> (Mover)
+(Mover) ..> (Mostrar partida): <<include>>
+
+(Mover) <|-- (Mover mazo a descarte)
+(Mover) <|-- (Mover descarte a trabajo)
+(Mover) <|-- (Mover descarte a objetivo)
+(Mover) <|-- (Mover trabajo a descarte)
+(Mover) <|-- (Mover trabajo a trabajo)
+(Mover) <|-- (Mover trabajo a objetivo)
+(Mover) <|-- (Mover objetivo a trabajo)
+(Mover) <|-- (Mover descarte a mazo)
+
+@enduml
