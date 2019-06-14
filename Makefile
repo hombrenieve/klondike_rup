@@ -7,7 +7,7 @@ target = document.pdf
 all: ${target}
 
 # functions
-png:
+png: 
 	find . -name "*.puml" -exec plantuml {} \;
 	mkdir -p ${img_dir}
 	find . -name "*.png" -exec mv {} ${img_dir} \;
