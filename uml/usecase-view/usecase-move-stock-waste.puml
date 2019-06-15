@@ -1,0 +1,17 @@
+@startuml
+
+top to bottom direction
+hide empty description
+state "Partida abierta" as precondicion
+state " " as s1
+state " " as s2
+state " " as s3
+
+[*] --> precondicion
+precondicion --> s1: El usuario solicita ciclar un stack de máximo 3 cartas boca abajo de stock a waste
+s1 --> s2: El sistema permite retirar un stack de máximo 3 cartas de stock (stock contiene cartas)
+s2 --> s3: El sistema introduce el stack de cartas del stock en waste, poniendo las cartas boca arriba
+
+s3 --> StackMovido: El sistema muestra el stack de cartas en waste
+
+@enduml
