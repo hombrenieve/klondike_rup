@@ -1,0 +1,26 @@
+@startuml
+
+object User
+
+object ":Game" as game_view <<view>> {
+
+}
+
+object ":Stock_to_Waste" as Stock_to_Waste <<move controller>> {
+
+}
+
+object ":Game" as game_model <<model>> {
+
+}
+
+User -down-> game_view: move_stack
+
+game_view --> Stock_to_Waste: move_stack
+
+game_view -down-> game_model: get_stack_stock
+game_view -down-> game_model: get_stack_waste
+
+Stock_to_Waste --> game_model: move_stack
+
+@enduml
