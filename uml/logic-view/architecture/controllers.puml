@@ -36,6 +36,8 @@ package "Controllers" #DDDDDD {
         class Demo << management >>
         class Show << management >>
     }
+    ' Just for layout pourposes
+    Start -[hidden]up-> Work_to_Discarded
 }
 
 @enduml

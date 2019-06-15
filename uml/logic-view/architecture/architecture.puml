@@ -1,0 +1,12 @@
+@startuml
+
+
+package klondike {
+    package Controllers
+    package Models
+    package Views
+    Views -> Controllers
+    Controllers -> Models
+}
+
+@enduml
