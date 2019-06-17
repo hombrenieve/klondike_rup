@@ -1,0 +1,17 @@
+@startuml
+
+loop no completo ni bloqueado?
+alt cartas boca arriba en work inicial AND cartas boca arriba en work final AND cartas de ambos work son compatibles?
+    Jugador -> Juego: mover cartas de work a work
+    Juego -> Juego: Work_to_Work
+else no hay cartas boca arriba en work inicial
+    Juego -> Jugador: No se puede mover cartas de work inicial
+else no hay cartas boca arriba en work final
+    Juego -> Jugador: No se puede mover cartas a work final
+else cartas ambos work no son compatibles
+    Juego -> Jugador: Las cartas de ambos work no son compatibles. No se pueden combinar
+end alt
+end loop
+    
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+loop no completo ni bloqueado?
+alt cartas boca arriba en work AND cartas de work y target son compatibles?
+    Jugador -> Juego: mover cartas de work a target
+    Juego -> Juego: Work_to_Target
+alt todos los targets han sido completados?
+    Juego -> Jugador: Juego ganado
+end alt
+else no hay cartas boca arriba en work
+    Juego -> Jugador: No se puede mover cartas de work
+else cartas de work y target no son compatibles
+    Juego -> Jugador: Las cartas de work no se pueden colocar en target
+end alt
+end loop
+    
+
+@enduml
