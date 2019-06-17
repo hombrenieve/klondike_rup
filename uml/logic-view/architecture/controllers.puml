@@ -4,18 +4,18 @@ package "Controllers" #DDDDDD {
     package "Movement" #F7F3F3 {
         class Move
         class Deck_to_Discarded << movement >>
-        class Discaded_to_Deck << movement >>
-        class Discaded_to_Work << movement >>
-        class Discaded_to_Target << movement >>
+        class Discarded_to_Deck << movement >>
+        class Discarded_to_Work << movement >>
+        class Discarded_to_Target << movement >>
         class Work_to_Discarded << movement >>
         class Work_to_Work << movement >>
         class Work_to_Target << movement >>
         class Target_to_Work << movement >>
 
         Deck_to_Discarded -up-|> Move
-        Discaded_to_Deck -up-|> Move
-        Discaded_to_Work -up-|> Move
-        Discaded_to_Target -up-|> Move
+        Discarded_to_Deck -up-|> Move
+        Discarded_to_Work -up-|> Move
+        Discarded_to_Target -up-|> Move
         Work_to_Discarded -up-|> Move
         Work_to_Work -up-|> Move
         Work_to_Target -up-|> Move

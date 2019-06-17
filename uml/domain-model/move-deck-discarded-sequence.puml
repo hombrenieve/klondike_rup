@@ -1,0 +1,17 @@
+@startuml
+
+loop no completo ni bloqueado?
+alt cartas en mazo AND mazo reiniciado menos de 4 veces?
+    Jugador -> Juego: Sacar a descarte
+    Juego -> Juego: Deck_to_Discarded
+else no hay cartas en el mazo
+    Juego -> Jugador: No se puede sacar a descarte
+    Juego -> Juego: Discarded_to_Deck
+    Juego -> Juego: mazo reiniciado una vez mas
+else mazo reiniciado 3 veces?
+    Juego-> Jugador: Partida perdida.
+end alt
+end loop
+    
+
+@enduml
