@@ -6,6 +6,7 @@ package klondike {
     package Models
     package Views
     Views -> Controllers
+    Views -> Models
     Controllers -> Models
 }
 

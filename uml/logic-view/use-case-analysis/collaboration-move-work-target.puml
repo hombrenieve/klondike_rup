@@ -20,6 +20,7 @@ game_view --> Work_to_Target: move_card
 
 game_view -down-> game_model: get_stack_work
 game_view -down-> game_model: get_stack_target
+game_view -down-> game_model: get_game_status
 
 Work_to_Target --> game_model: move_card
 
