@@ -12,23 +12,23 @@ while (no completo ni bloqueado?)
 		:mover pila de descarte entera a mazo;
 	endif
 	split again
-	if () then
+	if (carta en descarte compatible**[1]** con carta visible en trabajo) then
 		:mover de descarte a trabajo;
 	endif
 	split again
-	if () then
+	if (carta en descarte compatible**[2]** con carta visible en objetivo) then
 		:mover de descarte a objetivo;
 	endif
 	split again
-	if ()
+	if (cartas visibles en trabajo1 compatible**[1]** con cartas visibles en trabajo 2) then
 		:mover entre trabajos;
 	endif
 	split again
-	if () then
+	if (cima de trabajo compatible**[2]** con objetivo) then
 		:mover de trabajo a objetivo;
 	endif
 	split again
-	if ()
+	if (cima de objetivo compatible**[1]** con trabajo) then
 		:mover de objetivo a trabajo;
 	endif
 	endsplit
