@@ -8,7 +8,7 @@ all: ${target}
 
 # functions
 png: 
-	find . -name "*.puml" -exec plantuml {} \;
+	find . -name "*.puml" -exec plantuml -charset UTF-8 {} \;
 	mkdir -p ${img_dir}
 	find . -name "*.png" -exec mv {} ${img_dir} \;
 
